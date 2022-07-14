@@ -16,6 +16,14 @@
 
 package com.google.samples.apps.iosched.shared.di
 
+/**
+ * 모듈이 shared에 있는데, 그냥 mobile에 있어도 되지 않나?
+ * 어짜피 의존성을 부적절하게 사용할일도 없이 단지 CoroutineModule에서만 사용하게될텐데 말이야...
+ * 그리고 ApplicationScope라는것도 만들어서 사용하고 있다.
+ * 저걸 실제로 사용하는 곳 중 하나는
+ * @see SnackbarMessageManager
+ * 에서 사용하고 있다.
+ * */
 import javax.inject.Qualifier
 
 @Retention(AnnotationRetention.BINARY)

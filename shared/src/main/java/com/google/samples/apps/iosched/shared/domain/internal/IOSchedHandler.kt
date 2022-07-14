@@ -19,6 +19,12 @@ package com.google.samples.apps.iosched.shared.domain.internal
 import android.os.Handler
 import android.os.Looper
 
+
+/**
+ * forwarding이란 용어를 사용하고 있는데 Network를 공부할 때 패킷을 목적지까지 보내기 위한 경로설정을 의미했다.
+ * 아래의 IOSchedHandler 역시 Handler를 이용하여 데이터를 전달해주는것을 의미하는 것 같다.
+ * */
+
 /**
  * A forwarding interface for [Handler] to support mocking in tests.
  */
