@@ -22,7 +22,7 @@ import com.google.samples.apps.iosched.ui.filters.FiltersViewModelDelegate
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class SearchFilterFragment : FiltersFragment() {
+class SearchFilterFragment : FiltersFragment() { // FiltersFragment() 확인해보기
 
     private val viewModel: SearchViewModel by viewModels(
         ownerProducer = { requireParentFragment() }

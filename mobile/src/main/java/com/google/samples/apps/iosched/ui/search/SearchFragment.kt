@@ -41,7 +41,6 @@ import com.google.samples.apps.iosched.util.doOnApplyWindowInsets
 import com.google.samples.apps.iosched.util.launchAndRepeatWithViewLifecycle
 import com.google.samples.apps.iosched.util.setContentMaxWidth
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 import javax.inject.Inject
 import javax.inject.Named
 
@@ -176,6 +175,9 @@ class SearchFragment : Fragment() {
             }
         }
 
+        // 실무에 바로 적용하는 안드로이드 프로그래밍(제 4판) - "빅 너드 랜치" 책에서도 아래와 같이
+        // savedInstanceState == null임을 이용하여 해당 Fragment가 처음 만들어졌는지를 확인한다.
+        // fragmentManager를 사용해도 되지만 fragmentManager에 또 접근하는 비용을 고려하면 savedInstanceState == null이 더 낫다.
         if (savedInstanceState == null) {
             // On first entry, show the filters.
             findFiltersFragment().showFiltersSheet()

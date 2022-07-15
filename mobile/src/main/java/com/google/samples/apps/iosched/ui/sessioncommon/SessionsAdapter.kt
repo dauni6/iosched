@@ -44,6 +44,7 @@ class SessionsAdapter(
         ).apply {
             tags.apply {
                 setRecycledViewPool(tagViewPool)
+                // todo : FlexboxLayoutManager란 무엇인가?
                 layoutManager = FlexboxLayoutManager(parent.context).apply {
                     recycleChildrenOnDetach = true
                 }
